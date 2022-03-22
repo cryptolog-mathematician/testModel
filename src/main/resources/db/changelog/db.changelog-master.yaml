@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: cryptogramer
+      comment: Add initial data
+      cahanges:
+        - createTable:
+            tableName: student
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: birth_date
+                  type: timestamp
+                  constraints:
+                    nullable: true
+                    unique: false
